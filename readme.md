@@ -3,13 +3,13 @@ O projeto pode ser utilizado como base para a construção de uma aplicação de
 A aplicação utiliza as seguintes tecnologias:
 
 	1. Java 8 e JPA
-	2. Hibernate e Entity Manager
-	3. JavaFX
-	4. FXForm2 (https://github.com/dooApp/FXForm2)
+	2. [Hibernate e Entity Manager](https://docs.jboss.org/hibernate/entitymanager/3.5/reference/en/html/pr01.html#)
+	3. [JavaFX](http://docs.oracle.com/javase/8/javase-clienttechnologies.htm)
+	4. [FXForm2](https://github.com/dooApp/FXForm2)
 	
 # Organização do Projeto #
 Os códigos fontes estão na pasta (src/main/java).
-Seguindo os padrões do Maven (https://pt.wikipedia.org/wiki/Apache_Maven), o pacote base do projeto ficará com o nome "entidade.organização.projeto", nesse caso "com.bigriver.samples".
+Seguindo os padrões do [Maven](https://pt.wikipedia.org/wiki/Apache_Maven), o pacote base do projeto ficará com o nome "entidade.organização.projeto", nesse caso "com.bigriver.samples".
 
 Dentro do pacote principal, temos os pacotes:
 	
@@ -39,7 +39,7 @@ O recurso principal para a utilização do Hibernate é o arquivo de persistênc
 ```
 
 # JavaDoc #
-O JavaDoc(https://pt.wikipedia.org/wiki/Javadoc) está na pasta (JavaDoc) do projeto.
+O [JavaDoc](https://pt.wikipedia.org/wiki/Javadoc) está na pasta (JavaDoc) do projeto.
 Ele contém as informações referentes a todas as classes e métodos do projeto.
 Deve ser usado como referência para futuras implementações, e manuntenção dos projetos Java.
 
