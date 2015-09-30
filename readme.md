@@ -42,3 +42,16 @@ O recurso principal para a utilização do Hibernate é o arquivo de persistênc
 O JavaDoc(https://pt.wikipedia.org/wiki/Javadoc) está na pasta (JavaDoc) do projeto.
 Ele contém as informações referentes a todas as classes e métodos do projeto.
 Deve ser usado como referência para futuras implementações, e manuntenção dos projetos Java.
+
+# Utilização das Classes #
+
+Acessos ao Banco de Dados - https://github.com/rodsnjr/cursojava/tree/master/src/main/java/com/bigriver/samples/dao
+
+Mapeamento do Banco de Dados
+https://github.com/rodsnjr/cursojava/tree/master/src/main/java/com/bigriver/samples/model
+
+Eventos Do Banco de Dados
+https://github.com/rodsnjr/cursojava/tree/master/src/main/java/com/bigriver/samples/listener
+
+Telas De Cadastro e Consulta
+https://github.com/rodsnjr/cursojava/tree/master/src/main/java/com/bigriver/samples/view
