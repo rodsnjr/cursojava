@@ -3,9 +3,9 @@ O projeto pode ser utilizado como base para a construção de uma aplicação de
 A aplicação utiliza as seguintes tecnologias:
 
 	1. Java 8 e JPA
-	2. [Hibernate e Entity Manager](https://docs.jboss.org/hibernate/entitymanager/3.5/reference/en/html/pr01.html#)
-	3. [JavaFX](http://docs.oracle.com/javase/8/javase-clienttechnologies.htm)
-	4. [FXForm2](https://github.com/dooApp/FXForm2)
+	2. Hibernate e Entity Manager
+	3. JavaFX
+	4. FXForm2
 	
 # Organização do Projeto #
 Os códigos fontes estão na pasta (src/main/java).
