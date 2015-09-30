@@ -6,7 +6,7 @@ todas as funcionalidades de bancos de dados, tais como obter as conexões,
 mapear objetos Java para tipos de dados SQL ou executar comandos SQL, 
 devem ser feitas por classes DAO.
 
-https://pt.wikipedia.org/wiki/Objeto_de_acesso_a_dados
+[Referência](https://pt.wikipedia.org/wiki/Objeto_de_acesso_a_dados)
 
 ## Pacote ##
 
@@ -48,5 +48,5 @@ A partir da interface DAO, implementa-se uma classe com todas as funcionalidades
 
 ```
 
-A classe BancoDeDados nos prepara os EntityManager (http://docs.oracle.com/javaee/7/api/javax/persistence/EntityManager.html)
+A classe BancoDeDados nos prepara os [EntityManager](http://docs.oracle.com/javaee/7/api/javax/persistence/EntityManager.html)
 para acesso as entidades no BD. Então podemos utilizar os métodos deste objeto para consulta, persistência e etc.

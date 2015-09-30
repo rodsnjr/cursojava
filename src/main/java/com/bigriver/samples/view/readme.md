@@ -31,5 +31,4 @@ Atrelando a classe em uma Tela
 
 ```
 
-(JavaFX)
-https://docs.oracle.com/javafx/2/get_started/hello_world.htm
+(JavaFX)[https://docs.oracle.com/javafx/2/get_started/hello_world.htm]
