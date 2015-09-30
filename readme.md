@@ -21,6 +21,9 @@ Dentro do pacote principal, temos os pacotes:
 	
 Seguindo o mesmo padrão os códigos de testes estarão agrupados na pasta (src/test/java), e os recursos do projeto na pasta (src/main/resources).
 
+Os códigos fontes de testes demonstram a utilização crua das classes da aplicação, e testam a sua funcionalidade. 
+E estão agrupados por funcionalidades
+
 O recurso principal para a utilização do Hibernate é o arquivo de persistência (persistence.xml), ele dita quais conexões serão feitas aos bancos de dados do projeto. No caso deste projeto só há uma conexão ao banco de dados MySQL local.
 
 ```xml

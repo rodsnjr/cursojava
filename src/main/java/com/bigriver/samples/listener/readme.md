@@ -15,3 +15,35 @@ Os eventos podem ser:
 * PreUpdate, antes atualizar alguma entidade
 * PostUpdate, após atualizar alguma entidade
 * PostLoad, após carregar alguma entidade
+
+Utilizando um EntityListener:
+
+```java
+	
+	//Define uma Entidade
+	@Entity
+	//Define que a classe PessoaListener irá gerenciar os eventos de Entidades
+	@EntityListener(PessoaListener.class)
+	public class Pessoa {
+		//Métodos e Atributos ...
+	}
+
+```
+
+Implementando um EntityListener
+
+```java
+
+	public class EnderecoListener {
+		//Define um evento para Antes de Atualizar o Objeto
+		@PostUpdate
+		public void antesAtualizar(Endereco endereco){
+			//Checa se o Estado é o Rio Grande do Sul
+			if (endereco.getEstado().equals(Estado.RS)){
+				//Printa uma Mensagem!
+				System.out.println("Tchê bagual!!!");
+			}
+		}
+	}
+	
+```
