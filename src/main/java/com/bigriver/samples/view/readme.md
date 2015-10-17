@@ -34,17 +34,58 @@ Atrelando a classe em uma Tela
 Tela de Consulta
 
 ```java
+
 		//Cria um DAO para as Pessoas
 		PessoaDAO pessoaDao = new PessoaDAO();
 		//Cria uma Tela de Consulta de Pessoas
 		TelaConsulta<Pessoa> consulta = new TelaConsulta<>("Pessoas", pessoaDao);
 		//Cria uma Scene (JavaFX) com a tela de consulta
+		
+```
+
+Tela de Vendas
+
+Para a tela de Vendas é necessária uma implementação da interface *Vendas*.
+
+Implementando uma classe de Vendas ...
+
+```java
+	
+	/**
+	* Classe para Venda de Produtos
+	**/
+	public class VendasProdutos implements Vendas<Produto> {
+		private ProdutosDao produtosDao = new ProdutosDao();
+		
+		public List<Produto> todosNaoVendidos(){
+			return produtosDao.findTodosNaoVendidos();
+		}
+		
+		public void vender(Produto produto, Pessoa cliente){
+			produto.setCliente(cliente);
+			produtosDao.salvar(produto);
+		}
+	}
+
+```
+
+Criando uma tela de Vendas
+
+```java
+	
+	//Criando uma tela para venda de produtos a partir da implementação de
+	//VendasProdutos!
+	TelaVendas telaVendasProdutos = new TelaVendas(new VendasProdutos());
+
 ```
 
 Tela de DashBoard
 
 ```java
 
+		//Cria uma tela de DashBoard com as telas de Consulta e Cadastro de Pessoas
+		TelaDashboard telaDashboard = new TelaDashboard(consulta, cadastro);
+		
 ```
 
 (JavaFX)[https://docs.oracle.com/javafx/2/get_started/hello_world.htm]

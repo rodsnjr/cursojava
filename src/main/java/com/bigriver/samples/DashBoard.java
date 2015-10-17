@@ -31,8 +31,9 @@ public class DashBoard extends Application {
 		//Cria um DAO para as Pessoas
 		PessoaDAO pessoaDao = new PessoaDAO();
 		//Cria uma Tela de Consulta de Pessoas
-		TelaConsulta<Pessoa> consulta = new TelaConsulta<>("Pessoas", pessoaDao);
+		TelaConsulta<Pessoa> consulta = new TelaConsulta<>("Consulta Pessoas", pessoaDao);
 		
+		//Cria uma tela de DashBoard com as telas de Consulta e Cadastro de Pessoas
 		TelaDashboard telaDashboard = new TelaDashboard(consulta, cadastro);
 		
 		//Cria uma Scene (JavaFX) com a tela de consulta
