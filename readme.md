@@ -52,3 +52,6 @@ Deve ser usado como referência para futuras implementações, e manuntenção d
 [Eventos Do Banco de Dados](https://github.com/rodsnjr/cursojava/tree/master/src/main/java/com/bigriver/samples/listener)
 
 [Telas De Cadastro e Consulta](https://github.com/rodsnjr/cursojava/tree/master/src/main/java/com/bigriver/samples/view)
+
+# Testando o Projeto #
+Para testar utilizar as telas, rodar as classes *AppCadastro* ou *AppConsulta*.

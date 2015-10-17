@@ -31,4 +31,20 @@ Atrelando a classe em uma Tela
 
 ```
 
+Tela de Consulta
+
+```java
+		//Cria um DAO para as Pessoas
+		PessoaDAO pessoaDao = new PessoaDAO();
+		//Cria uma Tela de Consulta de Pessoas
+		TelaConsulta<Pessoa> consulta = new TelaConsulta<>("Pessoas", pessoaDao);
+		//Cria uma Scene (JavaFX) com a tela de consulta
+```
+
+Tela de DashBoard
+
+```java
+
+```
+
 (JavaFX)[https://docs.oracle.com/javafx/2/get_started/hello_world.htm]
