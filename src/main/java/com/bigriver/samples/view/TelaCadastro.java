@@ -8,6 +8,7 @@ import com.dooapp.fxform.FXForm;
 
 import javafx.geometry.Insets;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.layout.VBox;
 
 /**
@@ -33,21 +34,25 @@ public class TelaCadastro<T> extends VBox {
 	
 	private Collection<FXForm<?>> formularios;
 	
-	public TelaCadastro(T objetoPrincipal, DAO<T> dao){
+	private String titulo;
+	
+	public TelaCadastro(String titulo, T objetoPrincipal, DAO<T> dao){
 		super();
+		this.titulo = titulo;
+		
 		this.setPadding(new Insets(5));
 		this.objetoPrincipal = objetoPrincipal;
 		this.dao = dao;
 		this.formularios = new ArrayList<>();
 		
-		montarComponentesTela();
+		montarComponentesTela(titulo);
 		
 		montarFormularioPrimario();
 		
 	}
 	
-	public TelaCadastro(T objetoPrincipal, DAO<T> dao, Object... objetosSecundarios){
-		this(objetoPrincipal, dao);
+	public TelaCadastro(String titulo, T objetoPrincipal, DAO<T> dao, Object... objetosSecundarios){
+		this(titulo, objetoPrincipal, dao);
 		
 		this.objetosSecundarios = new ArrayList<>();
 		
@@ -59,15 +64,20 @@ public class TelaCadastro<T> extends VBox {
 		
 	}
 	
-	private void montarComponentesTela(){
-
-		this.formulariosBox = new VBox();
+	private void montarComponentesTela(String titulo){
+		
+		Label labelTitulo = new Label(titulo);
+		labelTitulo.getStyleClass().add("LabelTitle");
+		
+		this.formulariosBox = new VBox(10, labelTitulo);
 		
 		this.buttonCadastro = new Button("Cadastrar");
 		
 		this.buttonCadastro.setOnAction(evt -> {
 			this.dao.salvar(this.objetoPrincipal);
 		});
+		
+		this.buttonCadastro.getStyleClass().add("ButtonSave");
 
 		this.getChildren().add(formulariosBox);
 		this.getChildren().add(buttonCadastro);
@@ -75,11 +85,9 @@ public class TelaCadastro<T> extends VBox {
 	}
 	
 	private void montarFormularioPrimario(){	
-		
 		FXForm<T> formularioPrincipal = new FXForm<>(objetoPrincipal);
 		formulariosBox.getChildren().add(formularioPrincipal);
 		this.formularios.add(formularioPrincipal);
-		
 	}
 	
 	
@@ -92,6 +100,10 @@ public class TelaCadastro<T> extends VBox {
 			this.formularios.add(formularioSecundario);
 		}
 		
+	}
+	
+	public String getTitulo() {
+		return titulo;
 	}
 	
 }

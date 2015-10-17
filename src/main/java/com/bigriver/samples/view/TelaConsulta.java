@@ -26,10 +26,14 @@ public class TelaConsulta<T> extends VBox {
 	
 	private Button buttonMostrar;
 	
+	private String titulo;
+	
 	public TelaConsulta(String titulo, DAO<T> dao){
 		super();
 		this.dao = dao;
+		this.titulo = titulo;
 		this.labelTitulo = new Label(titulo);
+		labelTitulo.getStyleClass().add("LabelTitulo");
 		this.listaItens = new ListView<>();
 		this.buttonMostrar = new Button("Mostrar");
 		
@@ -40,6 +44,10 @@ public class TelaConsulta<T> extends VBox {
 		
 		this.getChildren().addAll(labelTitulo, buttonMostrar, listaItens);
 		
+	}
+	
+	public String getTitulo() {
+		return titulo;
 	}
 	
 }
