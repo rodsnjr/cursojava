@@ -10,7 +10,7 @@ import com.bigriver.samples.model.Pessoa;
  * @author Rodney
  *
  */
-public class VendaPessoa implements Vendas<Pessoa> {
+public class VendaPessoa implements ServicoVenda<Pessoa> {
 	
 	//Um atributo primário para busca de pessoas
 	private PessoaDAO dao;

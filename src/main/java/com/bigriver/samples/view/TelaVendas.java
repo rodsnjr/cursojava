@@ -2,7 +2,7 @@ package com.bigriver.samples.view;
 
 import com.bigriver.samples.dao.PessoaDAO;
 import com.bigriver.samples.model.Pessoa;
-import com.bigriver.samples.service.Vendas;
+import com.bigriver.samples.service.ServicoVenda;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -17,7 +17,7 @@ import javafx.scene.layout.RowConstraints;
 
 public class TelaVendas<T> extends GridPane{
 	
-	private Vendas<T> vendas;
+	private ServicoVenda<T> vendas;
 	
 	private PessoaDAO pessoaDAO;
 		
@@ -25,7 +25,12 @@ public class TelaVendas<T> extends GridPane{
 	
 	private ListView<Pessoa> listViewPessoas;
 	
-	public TelaVendas(String titulo, Vendas<T> vendas){
+	/**
+	 * Cria uma tela de venda de produtos
+	 * @param titulo O titulo para a tela
+	 * @param vendas O serviço de vendas de produto
+	 */
+	public TelaVendas(String titulo, ServicoVenda<T> vendas){
 		
 		this.setId(titulo);
 		

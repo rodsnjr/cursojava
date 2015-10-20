@@ -54,10 +54,10 @@ Implementando uma classe de Vendas ...
 	/**
 	* Classe para Venda de Produtos
 	**/
-	public class VendasProdutos implements Vendas<Produto> {
+	public class VendasProdutos implements GerenteVenda<Produto> {
 		private ProdutosDao produtosDao = new ProdutosDao();
 		
-		public List<Produto> todosNaoVendidos(){
+		public Collection<Produto> todosNaoVendidos(){
 			return produtosDao.findTodosNaoVendidos();
 		}
 		

@@ -15,6 +15,10 @@ public class TelaDashboard extends GridPane {
 	
 	private ScrollPane scrollPane;
 	
+	/**
+	 * Cria uma dashboard para o sistema
+	 * @param telas As telas que irão compor o sistema, ex: consultaPessoas, consultaProdutos, ...
+	 */
 	public TelaDashboard(Parent... telas) {
 		super();
 		

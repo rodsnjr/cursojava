@@ -35,7 +35,12 @@ public class TelaCadastro<T> extends VBox {
 	private Collection<FXForm<?>> formularios;
 	
 	private String titulo;
-	
+	/**
+	 * Cria uma tela com um formulário de cadastro
+	 * @param titulo O titulo da tela
+	 * @param objetoPrincipal O objeto principal para construção do formulário
+	 * @param dao A classe para controle de interações com o BD
+	 */
 	public TelaCadastro(String titulo, T objetoPrincipal, DAO<T> dao){
 		super();
 		this.titulo = titulo;
@@ -53,7 +58,13 @@ public class TelaCadastro<T> extends VBox {
 		getStylesheets().add(getClass().getClassLoader().getResource("style.css").toString());
 		
 	}
-	
+	/**
+	 * Cria uma tela com um formulário de cadastro
+	 * @param titulo O titulo da tela
+	 * @param objetoPrincipal O objeto principal para construção do formulário
+	 * @param dao A classe para controle de interações com o BD
+	 * @param objetosSecundarios Objetos secundários que irão preencher o formulário, ex: Telefone
+	 */
 	public TelaCadastro(String titulo, T objetoPrincipal, DAO<T> dao, Object... objetosSecundarios){
 		this(titulo, objetoPrincipal, dao);
 		

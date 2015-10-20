@@ -30,6 +30,11 @@ public class TelaConsulta<T> extends VBox {
 	
 	private String titulo;
 	
+	/**
+	 * Cria uma tela de Consulta de Determinado Item
+	 * @param titulo O titulo da tela
+	 * @param dao A classe para controle de interações com o BD
+	 */
 	public TelaConsulta(String titulo, DAO<T> dao){
 		super(10);
 		this.dao = dao;

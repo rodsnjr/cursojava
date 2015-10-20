@@ -12,9 +12,7 @@ import com.guigarage.flatterfx.FlatterFX;
 
 import javafx.application.Application;
 import javafx.scene.Scene;
-import javafx.stage.Modality;
 import javafx.stage.Stage;
-import javafx.stage.StageStyle;
 
 public class DashBoard extends Application {
 	//Titulo da Janela
@@ -26,7 +24,6 @@ public class DashBoard extends Application {
 
 	@Override
 	public void start(Stage primaryStage) throws Exception {
-	
 		//Carrega um objeto Pessoa e Endereço
 		Pessoa pessoa = new Pessoa();
 		Endereco endereco = new Endereco();
