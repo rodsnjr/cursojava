@@ -55,4 +55,7 @@ Deve ser usado como referência para futuras implementações, e manuntenção d
 
 # Testando o Projeto #
 Para testar utilizar as telas, rodar as classes *AppCadastro* ou *AppConsulta*, ou *DashBoard*.
+
 ![alt tab](http://imageshack.com/a/img903/9910/iZ1AsT.png)
+
+A DashBoard contém o sistema como um todo.
