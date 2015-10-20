@@ -75,7 +75,7 @@ Criando uma tela de Vendas
 	
 	//Criando uma tela para venda de produtos a partir da implementação de
 	//VendasProdutos!
-	TelaVendas telaVendasProdutos = new TelaVendas(new VendasProdutos());
+	TelaVendas telaVendasProdutos = new TelaVendas("Venda de Produtos", new VendasProdutos());
 
 ```
 
@@ -84,8 +84,8 @@ Tela de DashBoard
 ```java
 
 		//Cria uma tela de DashBoard com as telas de Consulta e Cadastro de Pessoas
-		TelaDashboard telaDashboard = new TelaDashboard(consulta, cadastro);
+		TelaDashboard telaDashboard = new TelaDashboard(consulta, cadastro, telaVendasProdutos);
 		
 ```
 
-(JavaFX)[https://docs.oracle.com/javafx/2/get_started/hello_world.htm]
+[JavaFX](https://docs.oracle.com/javafx/2/get_started/hello_world.htm)
