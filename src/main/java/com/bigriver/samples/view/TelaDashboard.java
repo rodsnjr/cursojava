@@ -39,6 +39,8 @@ public class TelaDashboard extends GridPane {
 			constraints.setHgrow(Priority.ALWAYS);
 		}
 		
+		getStylesheets().add(getClass().getClassLoader().getResource("style.css").toString());
+		
 	}
 	
 	private void changeTela(Parent tela){

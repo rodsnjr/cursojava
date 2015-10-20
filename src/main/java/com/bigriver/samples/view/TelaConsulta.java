@@ -1,6 +1,7 @@
 package com.bigriver.samples.view;
 
 import com.bigriver.samples.dao.DAO;
+
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.scene.control.Button;
@@ -37,12 +38,16 @@ public class TelaConsulta<T> extends VBox {
 		this.listaItens = new ListView<>();
 		this.buttonMostrar = new Button("Mostrar");
 		
+		this.buttonMostrar.getStyleClass().add("ButtonMostrar");
+		
 		buttonMostrar.setOnAction(evt -> {
 			ObservableList<T> listaTodos = FXCollections.observableArrayList(this.dao.todos());
 			listaItens.setItems(listaTodos);
 		});
 		
 		this.getChildren().addAll(labelTitulo, buttonMostrar, listaItens);
+		
+		getStylesheets().add(getClass().getClassLoader().getResource("style.css").toString());
 		
 	}
 	

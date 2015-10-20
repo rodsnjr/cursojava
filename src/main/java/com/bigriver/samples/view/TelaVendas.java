@@ -56,6 +56,8 @@ public class TelaVendas<T> extends GridPane{
 		
 		fillPane();
 		
+		getStylesheets().add(getClass().getClassLoader().getResource("style.css").toString());
+		
 	}
 	
 	private void fillData(){
@@ -73,6 +75,7 @@ public class TelaVendas<T> extends GridPane{
 		Label lbTitulo = new Label(getId());
 		
 		Button buttonMostrar = new Button("Mostrar");
+		buttonMostrar.getStyleClass().add("ButtonMostrar");
 		
 		buttonMostrar.setOnAction(evt -> fillData());
 		
