@@ -49,6 +49,7 @@ public class TelaCadastro<T> extends VBox {
 		
 		montarFormularioPrimario();
 		
+		getStyleClass().add("root");
 		getStylesheets().add(getClass().getClassLoader().getResource("style.css").toString());
 		
 	}

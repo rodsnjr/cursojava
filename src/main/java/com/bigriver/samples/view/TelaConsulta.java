@@ -4,6 +4,7 @@ import com.bigriver.samples.dao.DAO;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.geometry.Insets;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
@@ -30,7 +31,7 @@ public class TelaConsulta<T> extends VBox {
 	private String titulo;
 	
 	public TelaConsulta(String titulo, DAO<T> dao){
-		super();
+		super(10);
 		this.dao = dao;
 		this.titulo = titulo;
 		this.labelTitulo = new Label(titulo);
@@ -39,6 +40,11 @@ public class TelaConsulta<T> extends VBox {
 		this.buttonMostrar = new Button("Mostrar");
 		
 		this.buttonMostrar.getStyleClass().add("ButtonMostrar");
+		
+//		getStyleClass().add("Consulta");
+		getStyleClass().add("root");
+		
+		this.setPadding(new Insets(5));
 		
 		buttonMostrar.setOnAction(evt -> {
 			ObservableList<T> listaTodos = FXCollections.observableArrayList(this.dao.todos());

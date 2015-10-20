@@ -14,14 +14,15 @@ public class BancoDeDados {
 	/** Construtor de Entity Managers único **/
 	private static EntityManagerFactory construtorEntityManagers;
 	
-	static {
-		construtorEntityManagers = Persistence.createEntityManagerFactory("samples");
-	}
 	/**
 	 * Cria um Entity Manager
 	 * @return Um gerente de Entidades
 	 */
 	public static final EntityManager abreEntityManager(){
+		if (construtorEntityManagers == null){
+			Persistence.createEntityManagerFactory("samples");
+		}
+		
 		return construtorEntityManagers.createEntityManager();
 	}
 	

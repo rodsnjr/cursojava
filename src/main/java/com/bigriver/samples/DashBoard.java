@@ -3,16 +3,22 @@ package com.bigriver.samples;
 import com.bigriver.samples.dao.PessoaDAO;
 import com.bigriver.samples.model.Endereco;
 import com.bigriver.samples.model.Pessoa;
+import com.bigriver.samples.service.VendaPessoa;
 import com.bigriver.samples.view.TelaCadastro;
 import com.bigriver.samples.view.TelaConsulta;
 import com.bigriver.samples.view.TelaDashboard;
 import com.bigriver.samples.view.TelaVendas;
+import com.guigarage.flatterfx.FlatterFX;
 
 import javafx.application.Application;
 import javafx.scene.Scene;
+import javafx.stage.Modality;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 
 public class DashBoard extends Application {
+	//Titulo da Janela
+	static final String TITULO = "Venda de Produtos";
 	
 	public static void main(String[] args) {
 		launch();
@@ -20,6 +26,7 @@ public class DashBoard extends Application {
 
 	@Override
 	public void start(Stage primaryStage) throws Exception {
+	
 		//Carrega um objeto Pessoa e Endereço
 		Pessoa pessoa = new Pessoa();
 		Endereco endereco = new Endereco();
@@ -45,9 +52,13 @@ public class DashBoard extends Application {
 		
 		//Cria uma Scene (JavaFX) com a tela de consulta
 		Scene scene = new Scene(telaDashboard);
-		
+				
 		//Cria uma Janela de Consulta
 		primaryStage.setScene(scene);
+		
+		//Titulo da Aplicação
+		primaryStage.setTitle(TITULO);
+				
 		//Abre a Janela
 		primaryStage.show();
 		//Quando fechar a aplicação, garante que
@@ -55,6 +66,10 @@ public class DashBoard extends Application {
 			//Fecha todas as conexões com a base de dados
 			BancoDeDados.closeFactory();
 		});
+		
+		
+		//Tema Especial para a Dashboard
+		FlatterFX.style();
 	}
 
 }

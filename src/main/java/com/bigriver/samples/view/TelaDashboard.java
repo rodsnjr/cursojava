@@ -31,7 +31,8 @@ public class TelaDashboard extends GridPane {
 		add(toolBarNav, 0, 0);
 		add(scrollPane, 0, 1);
 		getRowConstraints().add(new RowConstraints());
-		getRowConstraints().get(0).setPrefHeight(80);
+		getRowConstraints().get(0).setVgrow(Priority.NEVER);
+		
 		getColumnConstraints().add(new ColumnConstraints());
 		
 		for (ColumnConstraints constraints : getColumnConstraints()) {
@@ -39,7 +40,15 @@ public class TelaDashboard extends GridPane {
 			constraints.setHgrow(Priority.ALWAYS);
 		}
 		
+		getStyleClass().add("root");
+		
+		scrollPane.getStyleClass().add("root");
+		
+		toolBarNav.getStyleClass().add("DashBoardNav");
+
 		getStylesheets().add(getClass().getClassLoader().getResource("style.css").toString());
+		
+		
 		
 	}
 	

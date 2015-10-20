@@ -2,9 +2,11 @@ package com.bigriver.samples.view;
 
 import com.bigriver.samples.dao.PessoaDAO;
 import com.bigriver.samples.model.Pessoa;
+import com.bigriver.samples.service.Vendas;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.geometry.Insets;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
@@ -29,6 +31,8 @@ public class TelaVendas<T> extends GridPane{
 		
 		this.vendas = vendas;
 		
+		this.setPadding(new Insets(5));
+		
 		pessoaDAO = new PessoaDAO();
 		
 		getColumnConstraints().add(new ColumnConstraints());
@@ -38,7 +42,7 @@ public class TelaVendas<T> extends GridPane{
 		getColumnConstraints().get(0).setFillWidth(true);
 		getColumnConstraints().get(0).setHgrow(Priority.ALWAYS);
 		
-		getColumnConstraints().get(1).setMaxWidth(250);
+		getColumnConstraints().get(1).setMaxWidth(300);
 		getColumnConstraints().get(2).setFillWidth(true);
 		getColumnConstraints().get(2).setHgrow(Priority.ALWAYS);
 		
@@ -46,15 +50,18 @@ public class TelaVendas<T> extends GridPane{
 		getRowConstraints().add(new RowConstraints());
 		getRowConstraints().add(new RowConstraints());
 		
-		getRowConstraints().get(0).setPrefHeight(50);
+		getRowConstraints().get(0).setPrefHeight(100);
 		getRowConstraints().get(1).setVgrow(Priority.ALWAYS);
 		getRowConstraints().get(1).setFillHeight(true);
-		getRowConstraints().get(2).setPrefHeight(50);
+		getRowConstraints().get(2).setPrefHeight(100);
 		
 		listViewPessoas = new ListView<>();
 		listViewProduto = new ListView<>();
 		
 		fillPane();
+		
+
+		getStyleClass().add("root");
 		
 		getStylesheets().add(getClass().getClassLoader().getResource("style.css").toString());
 		
@@ -73,14 +80,15 @@ public class TelaVendas<T> extends GridPane{
 	private void fillPane(){
 		
 		Label lbTitulo = new Label(getId());
+		lbTitulo.setWrapText(true);
 		
 		Button buttonMostrar = new Button("Mostrar");
 		buttonMostrar.getStyleClass().add("ButtonMostrar");
 		
 		buttonMostrar.setOnAction(evt -> fillData());
 		
-		add(lbTitulo, 0, 0);
-		add(buttonMostrar, 2, 0);
+		add(lbTitulo, 1, 0);
+		add(buttonMostrar, 0, 0);
 		
 		add(listViewPessoas, 2, 1);
 		add(listViewProduto, 0, 1);
