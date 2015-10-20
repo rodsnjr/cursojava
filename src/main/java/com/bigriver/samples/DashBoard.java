@@ -6,6 +6,7 @@ import com.bigriver.samples.model.Pessoa;
 import com.bigriver.samples.view.TelaCadastro;
 import com.bigriver.samples.view.TelaConsulta;
 import com.bigriver.samples.view.TelaDashboard;
+import com.bigriver.samples.view.TelaVendas;
 
 import javafx.application.Application;
 import javafx.scene.Scene;
@@ -33,8 +34,14 @@ public class DashBoard extends Application {
 		//Cria uma Tela de Consulta de Pessoas
 		TelaConsulta<Pessoa> consulta = new TelaConsulta<>("Consulta Pessoas", pessoaDao);
 		
+		//Cria uma Venda Ilegal de Pessoas
+		VendaPessoa vendaPessoas = new VendaPessoa();
+		
+		//Cria uma Tela de Vendas
+		TelaVendas<Pessoa> telaVendas = new TelaVendas<>("Venda Ilegal Pessoas", vendaPessoas);
+		
 		//Cria uma tela de DashBoard com as telas de Consulta e Cadastro de Pessoas
-		TelaDashboard telaDashboard = new TelaDashboard(consulta, cadastro);
+		TelaDashboard telaDashboard = new TelaDashboard(consulta, cadastro, telaVendas);
 		
 		//Cria uma Scene (JavaFX) com a tela de consulta
 		Scene scene = new Scene(telaDashboard);

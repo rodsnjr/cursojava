@@ -39,7 +39,6 @@ public class TelaDashboard extends GridPane {
 			constraints.setHgrow(Priority.ALWAYS);
 		}
 		
-		setGridLinesVisible(true);
 	}
 	
 	private void changeTela(Parent tela){
@@ -55,7 +54,8 @@ public class TelaDashboard extends GridPane {
 				setText(((TelaCadastro<?>) tela).getTitulo());
 			}else if (tela instanceof TelaConsulta<?>){
 				setText(((TelaConsulta<?>) tela).getTitulo());
-			}
+			}else
+				setText(tela.getId());
 			setOnAction(evt -> changeTela(tela));
 		}
 	}

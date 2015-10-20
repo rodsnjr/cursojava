@@ -24,9 +24,13 @@ public class BancoDeDados {
 	public static final EntityManager abreEntityManager(){
 		return construtorEntityManagers.createEntityManager();
 	}
-
+	
+	/**
+	 * Fecha a Factory, e as conexões com o BD
+	 */
 	public static final void closeFactory() {
-		construtorEntityManagers.close();		
+		//construtorEntityManagers.close();
+		System.exit(0);
 	}
 	
 }
